@@ -1,0 +1,15 @@
+*.egg-info
+data/**
+!data/README.md
+docs
+bin/temp
+results/**
+!results/README.md
+bin/__py*
+bin/.ipynb*
+toolbox/**
+.DS*
+setup.py
+eyeDataN1_danny
+.history
+*.code-workspace
