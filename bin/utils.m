@@ -17,9 +17,10 @@ classdef utils
 
             Y1 = tns.extractanalog('Eye Y', data.stimuliPerNmrPulse(onset).pulseTime,...
              data.stimuliPerNmrPulse(onset+cond).pulseTime, data);
-
-            XY = [X1 Y1];
-            XY_inDeg = XY./sclFactor;
+         
+            XY_inDeg = [X1*sclFactor(1) Y1*sclFactor(2)]; % in degree
+%             XY = [X1 Y1];
+%             XY_inDeg = XY./sclFactor;
         end
 
 

@@ -50,6 +50,7 @@ def concat_data(data_path):
         df['exp_name'] = df['exp_name'].map(expt_new_names)
         df_all.append(df)
     df_all = pd.concat(df_all)
+    df_all.reset_index(inplace=True)
     return df_all
 
 
@@ -60,7 +61,7 @@ def removeInvalidData(df_all):
     # get the fixation data from the eye movement
     df_st_smp = df_all[['xdata', 'ydata', 'exp_name',
                         'monkey', 'date', 'condt', 'run']]
-    thrs_val = 1.5
+    thrs_val = 1.5  # threshold value for 3 degree of visual angle
     df_st_cl = df_st_smp[(df_st_smp.xdata.abs() < thrs_val) &
                          (df_st_smp.ydata.abs() < thrs_val)]
 
