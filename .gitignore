@@ -20,5 +20,5 @@ bin/.ipynb*
 setup.py
 .history
 *.code-workspace
-toolbox/nx3k_matlab/*
+toolboxes/nx3k_matlab/*
 !toolboxes/README.md
