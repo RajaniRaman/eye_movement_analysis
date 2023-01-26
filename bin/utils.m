@@ -140,7 +140,7 @@ classdef utils
                 a = data.EyeWindows(i).windows;
                 x = a(3)-a(1);
                 y = a(4)-a(2);
-                ab(i, :) = [x/sclFactor(1), y/sclFactor(2)];
+                ab(i, :) = [x*sclFactor(1), y*sclFactor(2)];
 %                 ab(i, :)= [x, y];
 %                 mean_fixwindow = median(ab);
             end
